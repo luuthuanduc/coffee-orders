@@ -1,0 +1,18 @@
+syntax = "proto3";
+
+package com.aimatrix.domain.generated;
+
+option java_multiple_files = true;
+
+message Store {
+  int32 id = 1;
+  Address address = 2;
+}
+
+message Address {
+  string address_line_1 = 1;
+  string city = 2;
+  string state_province = 3;
+  string country = 4;
+  string zip = 5;
+}

@@ -1,0 +1,18 @@
+syntax = "proto3";
+
+package com.aimatrix.domain.generated;
+
+option java_multiple_files = true;
+
+message OrderLineItem {
+  string name = 1;
+  Size size = 2;
+  int32 quantity = 3;
+  double cost = 4;
+}
+
+enum Size {
+  SMALL = 0;
+  MEDIUM = 1;
+  LARGE = 2;
+}

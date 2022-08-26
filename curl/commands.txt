@@ -1,0 +1,6 @@
+POST COFFEE ORDER EVENT
+-----------------------
+curl -i \
+-d '{"name":"Dilip Sundarraj","nickName":"","store":{"storeId":123,"address":{"addressLine1":"1234 street","city":"Chicago","state":"Illinois","country":"USA","zip":"11244"}},"orderLineItems":[{"name":"Latte","size":"MEDIUM","quantity":1,"cost":3.99}],"pickUp":"IN_STORE","status":"NEW"}' \
+-H "Content-Type: application/json" \
+-X POST http://localhost:8082/v1/coffee_orders

@@ -1,0 +1,5 @@
+rootProject.name = 'coffee-orders'
+
+include 'service'
+include 'consumer'
+include 'schema'

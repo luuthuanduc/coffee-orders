@@ -1,0 +1,15 @@
+syntax = "proto3";
+
+package com.aimatrix.domain.generated;
+
+option java_multiple_files = true;
+
+message CoffeeUpdateEvent {
+  string id = 1;
+  OrderStatus status = 2;
+}
+
+enum OrderStatus {
+  PROCESSING = 0;
+  READY_FOR_PICK_UP = 1;
+}

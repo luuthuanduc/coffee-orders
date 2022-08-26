@@ -1,0 +1,25 @@
+syntax = "proto3";
+
+package com.aimatrix.domain.generated;
+
+import "google/protobuf/timestamp.proto";
+import "store.proto";
+import "order_line_item.proto";
+
+option java_multiple_files = true;
+
+message CoffeeOrder {
+  string id = 1;
+  string name = 2;
+  string nick_name = 3;
+  Store store = 4;
+  repeated OrderLineItem order_line_items = 5;
+  google.protobuf.Timestamp ordered_time = 6;
+  PickUp pick_up = 7;
+  string status = 8;
+}
+
+enum PickUp {
+  IN_STORE = 0;
+  CURBSIDE = 1;
+}
