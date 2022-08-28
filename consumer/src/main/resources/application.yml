@@ -12,5 +12,7 @@ spring:
       key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
       value-deserializer: io.confluent.kafka.serializers.protobuf.KafkaProtobufDeserializer
       group-id: coffee-orders-listener-group
+      properties:
+        specific.protobuf.value.type: com.aimatrix.domain.generated.CoffeeOrder
     properties:
       schema.registry.url : http://localhost:8081
